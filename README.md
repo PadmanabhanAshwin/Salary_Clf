@@ -42,24 +42,6 @@ train_set = fetch_data("au_train.csv")
 test_set = fetch_data("au_test.csv")
 train_set.head(10)
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -374,23 +356,6 @@ train_set["native-country"].value_counts()
 train_set.describe().T
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -518,35 +483,6 @@ import matplotlib.pyplot as plt
 
 salary.hist(bins = 50, figsize = (20,15))
 ```
-
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-
-
-
-
-
-    array([[<matplotlib.axes._subplots.AxesSubplot object at 0x112f3b668>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x112f948d0>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x112fc5b38>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x112ffbda0>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11302ffd0>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11306c2b0>]],
-          dtype=object)
-
-
-
-
 ![png](output_15_2.png)
 
 
@@ -571,14 +507,6 @@ corr_matrix = df_new.corr()
 sns.heatmap(corr_matrix, annot = True, vmin = -1, vmax = 1, center = 0, cmap = "coolwarm")
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11e1c80f0>
-
-
-
-
 ![png](output_17_1.png)
 
 
@@ -591,12 +519,6 @@ df_new["worth"] = (df_new["capital-gain"] - df_new["capital-loss"])
 corr_matrix = df_new.corr()
 sns.heatmap(corr_matrix, annot = True, vmin = -1, vmax = 1, center = 0, cmap = "coolwarm")
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1157575f8>
-
 
 
 
@@ -617,65 +539,6 @@ sns.heatmap(corr_matrix, annot = True, vmin = -1, vmax = 1, center = 0, cmap = "
 attributes = list(salary.corr().columns)
 scatter_matrix(salary[attributes], figsize = (20,12))
 ```
-
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-
-
-
-
-
-    array([[<matplotlib.axes._subplots.AxesSubplot object at 0x115757f28>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x115b3d320>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ec42588>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ec757f0>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11eca9a58>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ecdecc0>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11ed12f28>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ed53198>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ed53208>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11edba6a0>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11edee908>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ee23b70>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11ee57dd8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ee9a080>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11eecd2e8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ef02550>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ef367b8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11ef6ba20>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11ef9fc88>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11efd1ef0>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f012198>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f046400>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f07b668>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f0b62e8>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11f0e6668>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f11a9e8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f14ad68>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f18a128>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f1bd4a8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f1ef828>],
-           [<matplotlib.axes._subplots.AxesSubplot object at 0x11f221ba8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f256f28>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f2952e8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f2c5668>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f2f89e8>,
-            <matplotlib.axes._subplots.AxesSubplot object at 0x11f32bd68>]],
-          dtype=object)
-
-
-
-
 ![png](output_20_2.png)
 
 
@@ -704,56 +567,6 @@ labels = numerical_labels + ["worth"]
 for variable, subplot in zip(labels, ax.flatten()):
     sns.boxplot(x =df_new["class"], y= df_new[variable], ax=subplot)
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x12094fbe0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120973630>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120995860>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120d45a90>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ea5fcc0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ea93ef0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ead4160>
-
-
-
 
 ![png](output_22_7.png)
 
@@ -796,70 +609,6 @@ for variable, subplot in zip(categorical_labels, ax.flatten()):
             label.set_rotation(90)
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11595f198>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1215e78d0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x115921c18>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121853f98>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121892358>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1218c46d8>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1218f3a58>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121928e10>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121967208>
-
-
-
-
 ![png](output_26_9.png)
 
 
@@ -882,85 +631,6 @@ for variable, subplot in zip(categorical_labels, ax.flatten()):
                           columns=salary["class"])
     cross_tab.plot(kind="bar",stacked=True, ax = subplot)
 ```
-
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:298: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      layout[ax.rowNum, ax.colNum] = ax.get_visible()
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The rowNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().rowspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-    /Users/ashwinpadmanabhan/Desktop/Spring2020/Aunalytics_ProblemStatement/AEnv/lib/python3.7/site-packages/pandas/plotting/_matplotlib/tools.py:304: MatplotlibDeprecationWarning: 
-    The colNum attribute was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use ax.get_subplotspec().colspan.start instead.
-      if not layout[ax.rowNum + 1, ax.colNum]:
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11f409048>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120d9c4e0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120eb9710>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120eeb940>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120f20b70>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120f57da0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120f97048>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120fc9278>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120ffd4e0>
-
-
-
-
 ![png](output_28_10.png)
 
 
@@ -983,69 +653,6 @@ for variable, subplot in zip(categorical_labels, ax.flatten()):
                           columns=salary["class"], normalize = "index")
     cross_tab.plot(kind="bar",stacked=True, ax = subplot)
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x120f69588>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11e2aa8d0>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121616860>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121566ba8>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121598f28>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1215182e8>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x121548668>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x12169aa20>
-
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1216cadd8>
-
-
 
 
 ![png](output_30_9.png)
@@ -1074,13 +681,6 @@ cross_tab_education = pd.crosstab(index= salary["education"],
 sns.heatmap(cross_tab_education,
             cmap="YlGnBu", annot=True, cbar=False)
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x12170bb00>
-
-
 
 
 ![png](output_33_1.png)
@@ -1600,41 +1200,6 @@ plot_roc(fpr_gra, tpr_gra, "Gradient Boosting (AUC = %0.2f)"%auc_gra)
 plt.legend(loc="lower right")
 plt.show()
 ```
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x127338f28>]
-
-
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x123d25358>]
-
-
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x1279c62e8>]
-
-
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x1279c6630>]
-
-
-
-
-
-
-    <matplotlib.legend.Legend at 0x1279ce208>
-
-
 
 
 ![png](output_70_5.png)
