@@ -1,4 +1,4 @@
-# Aunalytics Problem Statement 
+# Adult Data Set 
 ## Build a classifier to predict person's income as lesser/greater than $50k.
 
 **Author**: Ashwin Padmanabhan  
